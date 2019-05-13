@@ -225,7 +225,7 @@ export default class SiderMenu extends PureComponent {
     }
 
     const siderClassName = classNames(styles.sider, {
-      [styles.fixSiderBar]: true
+      [styles.fixSiderBar]: true,
     });
 
     return (

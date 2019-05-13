@@ -225,7 +225,7 @@ class BasicLayout extends React.PureComponent {
           isMobile={mb}
           onCollapse={this.handleMenuCollapse}
         />
-        <Layout style={{paddingLeft: collapsed ? '80px' : '256px'}}>
+        <Layout style={{paddingLeft: collapsed ? '80px' : '256px', overflowX: 'hidden'}}>
           <Header style={{ padding: 0 }}>
             <GlobalHeader
               logo={logo}
