@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import React, { PureComponent, Fragment } from 'react';
 import { Table, Button, Input, message, Popconfirm, Divider } from 'antd';
 import styles from './style.less';
