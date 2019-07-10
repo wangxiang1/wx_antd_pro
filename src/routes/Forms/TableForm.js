@@ -32,15 +32,19 @@ export default class TableForm extends PureComponent {
   toggleEditable = (e, key) => {
     e.preventDefault();
     const { data } = this.state;
+    const { onChange } = this.props;
     const newData = data.map(item => ({ ...item }));
     const target = this.getRowByKey(key, newData);
+    console.log('before',target)
     if (target) {
       // 进入编辑状态时保存原始数据
       if (!target.editable) {
         this.cacheOriginData[key] = { ...target };
       }
       target.editable = !target.editable;
-      this.setState({ data: newData });
+      console.log('after', target)
+      console.log(newData)
+      this.setState({ data: newData }, () => {if (!target.editable) onChange(newData)});
     }
   };
 
@@ -103,10 +107,8 @@ export default class TableForm extends PureComponent {
         return;
       }
       const { data } = this.state;
-      const { onChange } = this.props;
       delete target.isNew;
       this.toggleEditable(e, key);
-      onChange(data);
       this.setState({
         loading: false,
       });
