@@ -225,7 +225,7 @@ class BasicLayout extends React.PureComponent {
           isMobile={mb}
           onCollapse={this.handleMenuCollapse}
         />
-        <Layout style={{paddingLeft: collapsed ? '80px' : '256px', overflowX: 'hidden'}}>
+        <Layout style={{ paddingLeft: collapsed ? '80px' : '256px', overflowX: 'hidden' }}>
           <Header style={{ padding: 0 }}>
             <GlobalHeader
               logo={logo}
@@ -259,7 +259,7 @@ class BasicLayout extends React.PureComponent {
               <Route render={NotFound} />
             </Switch>
           </Content>
-          <Footer style={{ padding: 0 }}>
+          {/* <Footer style={{ padding: 0 }}>
             <GlobalFooter
               links={[
                 {
@@ -287,7 +287,7 @@ class BasicLayout extends React.PureComponent {
                 </Fragment>
               }
             />
-          </Footer>
+          </Footer> */}
         </Layout>
       </Layout>
     );

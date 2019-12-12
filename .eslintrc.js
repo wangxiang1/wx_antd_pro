@@ -60,6 +60,11 @@ module.exports = {
     'function-paren-newline': [0],
     'no-restricted-globals': [0],
     'require-yield': [1],
+    'no-unused-vars': [0],
+    'prefer-template': [0],
+    'react/sort-comp': [0],
+    'react/jsx-indent': [0],
+    'no-empty-source': [0],
   },
   parserOptions: {
     ecmaFeatures: {

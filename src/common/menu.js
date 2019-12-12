@@ -155,9 +155,39 @@ const menuData = [
     ],
   },
   {
+    name: '月报',
+    icon: 'user',
+    path: 'monthly',
+    children: [
+      {
+        name: '运营月报',
+        path: 'yy',
+      },
+      {
+        name: '租户月报',
+        path: 'tenant',
+      },
+    ],
+  },
+  {
     name: '测试',
     icon: 'user',
     path: 'miniTable',
+  },
+  {
+    name: 'testState',
+    icon: 'user',
+    path: 'testState',
+  },
+  {
+    name: 'testDemo',
+    icon: 'user',
+    path: 'testDemo',
+  },
+  {
+    name: 'testReact',
+    icon: 'user',
+    path: 'testReact',
   },
 ];
 

@@ -77,6 +77,21 @@ export const getRouterData = app => {
     '/miniTable': {
       component: dynamicWrapper(app, [], () => import('../routes/test/miniTable')),
     },
+    '/testState': {
+      component: dynamicWrapper(app, [], () => import('../routes/test/testState')),
+    },
+    '/testDemo': {
+      component: dynamicWrapper(app, [], () => import('../routes/test/testDemo')),
+    },
+    '/testReact': {
+      component: dynamicWrapper(app, [], () => import('../routes/test/testReact')),
+    },
+    '/monthly/yy': {
+      component: dynamicWrapper(app, [], () => import('../routes/Monthly/YyManager')),
+    },
+    '/monthly/tenant': {
+      component: dynamicWrapper(app, [], () => import('../routes/Monthly/Tenant')),
+    },
     '/dashboard/analysis': {
       component: dynamicWrapper(app, ['chart'], () => import('../routes/Dashboard/Analysis')),
     },
