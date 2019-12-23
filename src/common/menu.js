@@ -170,6 +170,11 @@ const menuData = [
     ],
   },
   {
+    name: '租户数据使用情况',
+    icon: 'user',
+    path: 'TenantDataUse',
+  },
+  {
     name: '测试',
     icon: 'user',
     path: 'miniTable',

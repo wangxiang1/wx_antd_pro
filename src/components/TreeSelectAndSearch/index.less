@@ -1,0 +1,82 @@
+.my-tree-select {
+  width: 100%;
+
+  .my-select-btn {
+    cursor: pointer;
+    input {
+      cursor: pointer;
+      width: 100%;
+      word-break: keep-all;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      vertical-align: bottom;
+    }
+
+    .btn-icon {
+      color: rgba(0, 0, 0, 0.45);
+      font-size: 12px;
+    }
+  }
+}
+
+.my-dropdown-menu {
+  width: 300px;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  max-height: 300px;
+  margin-bottom: 0;
+  padding-left: 0;
+  overflow: auto;
+  list-style: none;
+  outline: none;
+
+  .search-input {
+    padding: 5px;
+
+    input {
+      padding: 5px;
+    }
+  }
+
+  :global {
+    .ant-menu-item {
+      height: 30px;
+      line-height: 30px;
+    }
+
+    .ant-tree li {
+      word-break: keep-all;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      vertical-align: bottom;
+    }
+
+    .ant-tree li .ant-tree-node-content-wrapper {
+      display: inline;
+    }
+  }
+
+  .search-content {
+    .menu-item {
+      width: 100%;
+      word-break: keep-all;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      vertical-align: bottom;
+      margin: 0;
+      padding: 5px 10px;
+      color: rgba(0, 0, 0, 0.65);
+      cursor: pointer;
+      height: 38px;
+      line-height: 28px;
+
+      &:hover {
+        background-color: #e6f7ff;
+      }
+    }
+  }
+}

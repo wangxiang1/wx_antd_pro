@@ -26,4 +26,8 @@ export default {
   disableDynamicImport: true,
   publicPath: '/',
   hash: true,
+  define: {
+    COPNETPATH: '/copnet',
+    CLIENT_HOST: 'localhost:8000',
+  },
 };

@@ -92,6 +92,11 @@ export const getRouterData = app => {
     '/monthly/tenant': {
       component: dynamicWrapper(app, [], () => import('../routes/Monthly/Tenant')),
     },
+    '/TenantDataUse': {
+      component: dynamicWrapper(app, ['console/tenantData'], () =>
+        import('../routes/test/TenantDataUse')
+      ),
+    },
     '/dashboard/analysis': {
       component: dynamicWrapper(app, ['chart'], () => import('../routes/Dashboard/Analysis')),
     },
