@@ -2,4 +2,5 @@
 module.exports = {
   'primary-color': '#655fd9',
   'card-actions-background': '#f5f8fa',
+  // 'font-size-base': '12px',
 };

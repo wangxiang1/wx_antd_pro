@@ -9,12 +9,6 @@ export async function listTenant(params) {
     body: toFormData(params),
   });
 }
-export async function listTable(params) {
-  return request(`${XBCONSOLEPATH}/api/productOrder/allOrders`, {
-    method: 'POST',
-    body: params,
-  });
-}
 export async function registChart() {
   return request(`${COPNETPATH}/tenant/tenantRegistChart`);
 }

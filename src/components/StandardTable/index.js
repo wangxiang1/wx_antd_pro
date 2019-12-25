@@ -67,7 +67,7 @@ class StandardTable extends PureComponent {
   render() {
     const { selectedRowKeys, needTotalList } = this.state;
     const {
-      data: { list, pagination },
+      data: { list = [], pagination },
       loading,
       columns,
       rowKey,
