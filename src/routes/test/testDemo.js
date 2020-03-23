@@ -1,5 +1,7 @@
+/* eslint-disable*/
 import React, { Component } from 'react';
 import { Checkbox, Row, Col } from 'antd';
+import { Link } from 'react-router-dom';
 
 const CheckboxGroup = Checkbox.Group;
 
@@ -119,7 +121,7 @@ class TestDemo extends Component {
 
   render() {
     const { indeterminate, checkedList, checkAll } = this.state;
-    console.log(checkedList);
+    console.log(this.props.location.state);
     return (
       <div>
         <div style={{ borderBottom: '1px solid #E9E9E9' }}>
@@ -143,6 +145,14 @@ class TestDemo extends Component {
               : null}
           </Row>
         </CheckboxGroup>
+        <Link
+          to={{
+            pathname: '/testReact',
+            state: this.props.location.state,
+          }}
+        >
+          返回
+        </Link>
       </div>
     );
   }

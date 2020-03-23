@@ -1,12 +1,12 @@
-/* eslint-disable prefer-const,guard-for-in, react/destructuring-assignment, react/button-has-type, react/no-access-state-in-setstate */
-
+/* eslint-disable*/
 /*
  * @Author: wangxiang
  * @Date: 2019-07-10 11:18:31
- * @Last Modified by:   wangxiang
- * @Last Modified time: 2019-07-10 11:18:31
+ * @Last Modified by: wangxiang
+ * @Last Modified time: 2020-03-23 11:03:45
  */
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 class TestState extends Component {
   constructor(props) {
@@ -62,6 +62,35 @@ class TestState extends Component {
         </button>
         {/* 原生DOM事件 */}
         <button id="btn">绑定原生DOM事件的按钮</button>
+        <Link
+          to={{
+            pathname: '/testReact',
+            query: {
+              name: 'wangxiang',
+              age: 18,
+              desc: 'testlink',
+            },
+          }}
+        >
+          query link
+        </Link>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <Link
+          to={{
+            pathname: '/testReact',
+            state: {
+              name: 'wangxiang',
+              age: 18,
+              desc: 'testlink',
+            },
+          }}
+        >
+          state link
+        </Link>
+        <div>
+          返回的location:
+          {this.props.location.state ? JSON.stringify(this.props.location.state) : ''}
+        </div>
       </div>
     );
   }

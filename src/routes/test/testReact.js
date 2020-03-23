@@ -1,15 +1,15 @@
-/* eslint-disable prefer-const,comma-dangle,guard-for-in, react/destructuring-assignment, react/button-has-type, react/no-access-state-in-setstate */
-
+/* eslint-disable*/
 /*
  * @Author: wangxiang
  * @Date: 2019-07-10 11:18:31
- * @Last Modified by:   wangxiang
- * @Last Modified time: 2019-07-10 11:18:31
+ * @Last Modified by: wangxiang
+ * @Last Modified time: 2020-03-23 11:03:36
  */
 import React, { Component } from 'react';
 import debounce from 'lodash/debounce';
 import { Dropdown, Menu, Icon, Spin, Input, Tree } from 'antd';
 import moment from 'moment';
+import { Link } from 'react-router-dom';
 import styles from './testreact.less';
 
 const { TreeNode } = Tree;
@@ -177,7 +177,7 @@ class testReact extends Component {
 
   render() {
     const { selectValue, searchValueFlag, menus } = this.state;
-    console.log(this.state);
+    console.log(this.props);
 
     const menu = (
       <div className={styles['my-dropdown-menu']}>
@@ -240,6 +240,30 @@ class testReact extends Component {
             suffix={<Icon className={styles['btn-icon']} type="down" />}
           />
         </Dropdown>
+        <div>
+          上级页面传递的location：
+          {this.props.location.state ? JSON.stringify(this.props.location.state) : ''}
+        </div>
+
+        <Link
+          to={{
+            pathname: '/testState',
+            state: this.props.location.state,
+          }}
+        >
+          返回
+        </Link>
+
+        <Link
+          to={{
+            pathname: '/testDemo',
+            state: {
+              name: '三级页面参数',
+            },
+          }}
+        >
+          三级页面
+        </Link>
       </div>
     );
   }

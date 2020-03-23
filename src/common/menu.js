@@ -5,6 +5,7 @@ const menuData = [
     name: 'dashboard',
     icon: 'dashboard',
     path: 'dashboard',
+    authority: ['admin'],
     children: [
       {
         name: '分析页',
@@ -13,6 +14,7 @@ const menuData = [
       {
         name: '监控页',
         path: 'monitor',
+        authority: ['admin', 'user'],
       },
       {
         name: '工作台',
@@ -26,18 +28,21 @@ const menuData = [
     name: '表单页',
     icon: 'form',
     path: 'form',
+    authority: ['admin', 'user'],
     children: [
       {
         name: '基础表单',
         path: 'basic-form',
+        authority: ['admin'],
       },
       {
         name: '分步表单',
         path: 'step-form',
+        // authority: ['user'],
       },
       {
         name: '高级表单',
-        authority: 'admin',
+        // authority: 'admin',
         path: 'advanced-form',
       },
     ],
