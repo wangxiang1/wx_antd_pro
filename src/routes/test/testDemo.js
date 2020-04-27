@@ -2,6 +2,7 @@
 import React, { Component } from 'react';
 import { Checkbox, Row, Col } from 'antd';
 import { Link } from 'react-router-dom';
+import CycleDate from './cycleDate';
 
 const CheckboxGroup = Checkbox.Group;
 
@@ -124,7 +125,8 @@ class TestDemo extends Component {
     console.log(this.props.location.state);
     return (
       <div>
-        <div style={{ borderBottom: '1px solid #E9E9E9' }}>
+        <CycleDate />
+        {/* <div style={{ borderBottom: '1px solid #E9E9E9' }}>
           <Checkbox
             indeterminate={indeterminate}
             onChange={this.onCheckAllChange}
@@ -152,7 +154,7 @@ class TestDemo extends Component {
           }}
         >
           返回
-        </Link>
+        </Link> */}
       </div>
     );
   }
