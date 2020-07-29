@@ -68,6 +68,10 @@ module.exports = {
     'linebreak-style': [0],
     'prefer-template': 'off',
     'no-unused-vars': [0],
+    'jsx-a11y/alt-text': [0],
+    'react/react-in-jsx-scope': [0],
+    'no-return-assign': [0],
+    'react/destructuring-assignment': [0],
   },
   parserOptions: {
     ecmaFeatures: {
